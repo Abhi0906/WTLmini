@@ -1,8 +1,6 @@
 body{
     width: 100%;
     margin-bottom: 0px;
-    background-image: url("https://media.istockphoto.com/photos/abstract-white-wave-picture-id651808214?b=1&k=20&m=651808214&s=170667a&w=0&h=Fs5dwFVEQjIhXwuLztfGVPH4QxVlyGwC3bQhquQGCiI=");
-    background-size: cover;
 }
 h1{
     text-align: center;
@@ -11,14 +9,23 @@ h1{
     margin-bottom: 1em;
 }
 
-#mainNav{
+nav{
+    padding: 10px;
     background-color: #3F72AF;
 }
 
-nav{
-    padding: 10px;
+nav div:nth-of-type(1){
     display: flex;
-    justify-content:space-between;
+    justify-content: center;
+}
+
+nav input[type=search]{
+    width: 70%;
+}
+
+nav div:nth-of-type(3) {
+    display: flex;
+    justify-content: space-around;
 }
 
 a{
