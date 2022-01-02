@@ -26,3 +26,24 @@ a:hover{
     color: rgb(155, 197, 235);
     text-decoration: underline ;
 }
+
+.courses {
+    display: inline-block;
+    max-width: fit-content;
+    margin: none;
+}
+
+form .card {
+    margin: 20px;
+    padding: 10px;
+}
+
+form img:hover {
+    border: 1px solid gray;
+    filter: brightness(90%);
+    transition: all 0.50s;
+}
+
+.card-text{
+    min-height: 5rem;
+}

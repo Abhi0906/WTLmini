@@ -1,8 +1,16 @@
 const express = require('express');
 const ejsMate = require('ejs-mate');
+const mongoose = require('mongoose');
+const Course = require('./models/course');
 const path = require('path');
 
-
+const dbUrl = 'mongodb://localhost:27017/wtl';
+mongoose.connect(dbUrl);
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection eroor:"));
+db.once("open", () => {
+    console.log("Database Connected");
+});
 
 const app = express();
 app.engine('ejs', ejsMate);
@@ -16,14 +24,15 @@ app.get('/', (req, res) => {
 app.get('/home', (req, res) => {
     res.render('index');
 })
-app.get('/courses', (req, res) => {
-    res.render('courses');
+app.get('/courses', async (req, res) => {
+    const courses = await Course.find({});
+    res.render('courses', { courses });
 })
 app.get('/register', (req, res) => {
     res.render('register');
 })
 app.get('/signin', (req, res) => {
-    res.render('signin');
+    res.render('signin',);
 })
 
 const port = 3000;
