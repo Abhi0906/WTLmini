@@ -1,3 +1,8 @@
+body{
+    width: 100%;
+    margin-bottom: 0px;
+}
+
 nav{
     padding: 10px;
     background-color: #3F72AF;
@@ -39,9 +44,13 @@ form .card {
 }
 
 form img:hover {
-    border: 1px solid gray;
+    padding: 1px;
     filter: brightness(90%);
-    transition: all 0.50s;
+    transition: ease-out 0.1s;
+}
+
+form .card-title:hover {
+    text-decoration: underline;
 }
 
 .card-text{

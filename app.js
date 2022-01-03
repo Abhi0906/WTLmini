@@ -28,6 +28,13 @@ app.get('/courses', async (req, res) => {
     const courses = await Course.find({});
     res.render('courses', { courses });
 })
+app.get('/courses/:id', async (req, res) => {
+    const course = await Course.findById(req.params.id)
+    if (!course) {
+        return res.redirect('/courses');
+    }
+    res.render('coursedetails', { course });
+})
 app.get('/register', (req, res) => {
     res.render('register');
 })
