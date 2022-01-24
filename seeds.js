@@ -13,9 +13,9 @@ db.once("open", () => {
 const seedDB = async () => {
     // await Course.deleteMany({});
     const course = new Course({
-        title: 'Second Course',
-        description: 'abcaskjfhb ksehf jah gakyyg kyig kyg kjyhfgvjgh',
-        duration: '35 Days'
+        title: 'Fifth Course Course',
+        description: 'This is Fifth Course ',
+        duration: '50 Days'
     })
     await course.save();
 }
