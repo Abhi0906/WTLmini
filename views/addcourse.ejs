@@ -16,19 +16,19 @@
             <div class="col-12">
                 <h1>Add Course</h1>
                 <hr>
-                <form action="#" name="login" onsubmit="return validateForm()">
+                <form action="/courses" method="Post">
                     <div>
                         <label for="cname">Course Name</label>
-                        <input type="text" name="cname" id="cname" required>
+                        <input type="text" id="cname" name="newCourse[name]" required>
                     </div>
 
                     <div>
                         <label for="cdescription">Course description</label>
-                        <input type="text" name="cdescription" id="cdescription" required>
+                        <input type="text" id="cdescription" name="newCourse[description]" required>
                     </div>
                     <div>
                         <label for="duration">Course Duration</label>
-                        <input type="text" name="duration" id="duration" required>
+                        <input type="text" id="duration" name="newCourse[duration]" required>
                     </div>
                     <div class="buttons">
                         <button class="btn btn-primary" type="submit">Submit</button>

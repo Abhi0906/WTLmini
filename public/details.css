@@ -27,3 +27,12 @@ a{
     text-decoration: none;
 }
 
+#jumbo {
+    background-color: blueviolet;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#jumbo .container {
+    color: rgb(238, 238, 238);
+}

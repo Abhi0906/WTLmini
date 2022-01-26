@@ -3,6 +3,8 @@ const ejsMate = require('ejs-mate');
 const mongoose = require('mongoose');
 const Course = require('./models/course');
 const path = require('path');
+const methodOverride = require('method-override');
+
 
 const dbUrl = 'mongodb://localhost:27017/wtl';
 mongoose.connect(dbUrl);
@@ -14,6 +16,9 @@ db.once("open", () => {
 
 const app = express();
 app.engine('ejs', ejsMate);
+app.use(express.urlencoded({ extended: true }))
+app.use(methodOverride('_method'))
+
 app.set('view engine', 'ejs');
 app.set('/views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')));
@@ -29,6 +34,16 @@ app.get('/courses', async (req, res) => {
     res.render('courses', { courses });
 })
 
+app.post('/courses', async (req, res) => {
+    const course = new Course({
+        title: req.body.newCourse.name,
+        description: req.body.newCourse.description,
+        duration: req.body.newCourse.duration
+    })
+    await course.save();
+    res.redirect(`/courses/${course._id}`);
+})
+
 app.get('/courses/:id', async (req, res) => {
     const course = await Course.findById(req.params.id)
     if (!course) {
@@ -36,6 +51,13 @@ app.get('/courses/:id', async (req, res) => {
     }
     res.render('coursedetails', { course });
 })
+
+app.delete('/courses/:id', async (req, res) => {
+    const { id } = req.params;
+    await Course.findByIdAndDelete(id);
+    res.redirect('/courses');
+})
+
 app.get('/add/:pass', async (req, res) => {
     const pass = req.params.pass;
     if (pass !== "12233") {
