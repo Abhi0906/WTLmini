@@ -5,6 +5,9 @@ const CourseSchema = new Schema({
     title: String,
     description: String,
     duration: String,
+    rating: Number,
+    author: String,
+    link: String
     // applications: [
     //     {
     //         type: Schema.Types.ObjectId,

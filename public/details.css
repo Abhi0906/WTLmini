@@ -36,3 +36,50 @@ a{
 #jumbo .container {
     color: rgb(238, 238, 238);
 }
+
+#jumbo h1 {
+    font-family: sf pro display,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    margin-bottom: 1rem;
+}
+
+#jumbo h4 {
+    font-family: sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+#jumbo p {
+    font-family: sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+#jumbo p span {
+    text-decoration: underline;
+}
+
+.title {
+    margin: 50px 20px 20px 20px;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -34.9%;
+    width: 70%;
+    height: 70%;
+}
