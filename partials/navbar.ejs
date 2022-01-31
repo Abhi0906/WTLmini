@@ -1,17 +1,23 @@
-<nav class="container-fluid">
-    <div class="row">
-        <div class="col-1">
-            <a href="/">ELearn</a>
+<%- include('./flash') %>
+    <nav class="container-fluid">
+        <div class="row">
+            <div class="col-1">
+                <a href="/">ELearn</a>
+            </div>
+            <div class="col-7">
+                <input type="search" placeholder="Search" aria-label="Search">
+                <button type="submit">Search</button>
+            </div>
+            <div class="col-4">
+                <a href="/">Home</a>
+                <a href="courses">Courses</a>
+                <% if(!currentUser) {%>
+                    <a href="signin">Sign In</a>
+                    <a href="register">Register</a>
+                    <% } else{ %>
+                        <a href="logout">Logout</a>
+                        <%=currentUser.username%>
+                            <% } %>
+            </div>
         </div>
-        <div class="col-7">
-            <input type="search" placeholder="Search" aria-label="Search">
-            <button type="submit">Search</button>
-        </div>
-        <div class="col-4">
-            <a href="/">Home</a>
-            <a href="courses">Courses</a>
-            <a href="signin">Sign In</a>
-            <a href="register">Register</a>
-        </div>
-    </div>
-</nav>
+    </nav>

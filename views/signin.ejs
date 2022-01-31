@@ -19,20 +19,20 @@
                 <div class="col-12">
                     <h1>Login</h1>
                     <hr>
-                    <form action="#" name="login" onsubmit="return validateForm()">
-
+                    <form action="/signin" method="POST" name="login">
                         <div>
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username" required>
                         </div>
 
                         <div>
                             <label for="password">Password</label>
-                            <input type="password" name="password" id="password">
+                            <input type="password" name="password" id="password" required>
                         </div>
                         <div class="buttons">
-                            <button class="btn btn-primary" type="submit">Submit</button>
+                            <button class="btn btn-success" type="submit">Submit</button>
                             <button class="btn btn-danger" type="reset">Reset</button>
+                            <a href="/register" class="btn btn-primary">Register</a>
                         </div>
                     </form>
                 </div>

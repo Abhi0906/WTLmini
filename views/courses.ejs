@@ -27,7 +27,10 @@
                                 <%= course.title %>
                             </h5>
                             <p class="card-text">
-                                <%= course.description %>
+                                <% if (course.description.length> 25) {%>
+                                    <%course.description=course.description.substring(0, 100) + "..." ;%>
+                                        <%= course.description %>
+                                            <%}%>
                             </p>
                         </div>
                         <ul class="list-group list-group-flush">
