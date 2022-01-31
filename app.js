@@ -76,7 +76,10 @@ app.post('/courses', async (req, res) => {
     const course = new Course({
         title: req.body.newCourse.name,
         description: req.body.newCourse.description,
-        duration: req.body.newCourse.duration
+        duration: req.body.newCourse.duration,
+        author: req.body.newCourse.author,
+        rating: req.body.newCourse.rating,
+        link: req.body.newCourse.link,
     })
     await course.save();
     req.flash('success', 'Successfully Added a new Course');

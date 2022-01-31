@@ -69,7 +69,10 @@
             </center>
         </div>
         <div class="video-container">
-            <%- course.link %>
+            <iframe width="560" height="315" src="<%=course.link%>" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
         </div>
         <div>
             <form class="d-inline" action="/courses/<%= course._id %>?_method=DELETE" method="Post">

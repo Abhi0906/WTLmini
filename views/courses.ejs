@@ -27,7 +27,7 @@
                                 <%= course.title %>
                             </h5>
                             <p class="card-text">
-                                <% if (course.description.length> 25) {%>
+                                <% if (course.description.length> 100) {%>
                                     <%course.description=course.description.substring(0, 100) + "..." ;%>
                                         <%= course.description %>
                                             <%}%>
