@@ -1,23 +1,38 @@
 <%- include('./flash') %>
-    <nav class="container-fluid">
-        <div class="row">
-            <div class="col-1">
-                <a href="/">ELearn</a>
-            </div>
-            <div class="col-7">
-                <input type="search" placeholder="Search" aria-label="Search">
-                <button type="submit">Search</button>
-            </div>
-            <div class="col-4">
-                <a href="/">Home</a>
-                <a href="courses">Courses</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">ELearn</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="courses">Courses</a>
+                </li>
                 <% if(!currentUser) {%>
-                    <a href="signin">Sign In</a>
-                    <a href="register">Register</a>
+                    <li>
+                        <a class="nav-link" href="signin">Sign In</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="register">Register</a>
+                    </li>
+
                     <% } else{ %>
-                        <a href="logout">Logout</a>
-                        <%=currentUser.username%>
-                            <% } %>
-            </div>
+                        <li>
+                            <a class="nav-link" href="logout">Logout</a>
+                        </li>
+                        <li>
+                            <a id="usern" class="nav-link" href="#">
+                                <%=currentUser.username%>
+                            </a>
+                        </li>
+                        <% } %>
+            </ul>
         </div>
     </nav>
