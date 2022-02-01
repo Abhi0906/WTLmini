@@ -7,7 +7,11 @@ const CourseSchema = new Schema({
     duration: String,
     rating: Number,
     author: String,
-    link: String
+    link: String,
+    owner: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 });
 
 

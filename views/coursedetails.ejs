@@ -76,7 +76,9 @@
         </div>
         <div>
             <form class="d-inline" action="/courses/<%= course._id %>?_method=DELETE" method="Post">
-                <button class="btn btn-danger">Delete</button>
+                <% if(currentUser && course.owner.equals(currentUser._id) ){ %>
+                    <button class="btn btn-danger">Delete</button>
+                    <% } %>
             </form>
         </div>
 
