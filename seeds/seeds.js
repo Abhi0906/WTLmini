@@ -22,7 +22,6 @@ const seedDB = async () => {
             rating: `${courses[i].rating}`,
             author: `${courses[i].author}`,
             link: `${courses[i].link}`,
-            owner: '61f8ed775f717d6e62a81dbb' || '61f7d7d6108cefc9adb1537c'
         })
         await course.save();
     }
