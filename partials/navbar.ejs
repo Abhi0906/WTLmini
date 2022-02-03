@@ -16,22 +16,27 @@
                         <a class="nav-link" href="courses">Courses</a>
                     </li>
                     <% if(!currentUser) {%>
-                        <li>
-                            <a class="nav-link" href="signin">Sign In</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="signin" style="margin-left: 65vw;">Sign In</a>
                         </li>
-                        <li>
-                            <a class="nav-link" href="register">Register</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register" style="margin-right: 0.5vw;">Register</a>
                         </li>
 
                         <% } else{ %>
-                            <li>
-                                <a class="nav-link" href="logout">Logout</a>
-                            </li>
-                            <li>
-                                <a class="nav-link text-muted text-decoration-none" href="#">
+                            <img src="https://cdn1.iconfinder.com/data/icons/circle-outlines-colored/512/User_Account_Avatar_Person_Profile_Login_Human-512.png"
+                                 alt="Avatar" class="avatar" style="margin-left: 66vw;vertical-align: middle;width: 40px;height: 40px;border-radius: 50%;">
+                            <li class="nav-item dropdown" style="margin-right: 0.5vw;">
+                                <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <%=currentUser.username%>
                                 </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="logout">Logout</a>
+                                    </li>
+                                </ul>
                             </li>
+                            
                             <% } %>
                 </ul>
             </div>

@@ -18,66 +18,44 @@
 
 <body>
     <%- include('../partials/flash') %>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">ELearn</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
-                aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">ELearn</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarToggler">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="\courses">Courses</a>
-                    </li>
-                    <% if(!currentUser) {%>
-                        <li>
-                            <a class="nav-link" href="\signin">Sign In</a>
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
                         </li>
-                        <li>
-                            <a class="nav-link" href="\register">Register</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="\courses">Courses</a>
                         </li>
-
-                        <% } else{ %>
+                        <% if(!currentUser) {%>
                             <li>
-                                <a class="nav-link" href="\logout">Logout</a>
+                                <a class="nav-link" href="signin" style="margin-left: 65vw;">Sign In</a>
                             </li>
                             <li>
-                                <a class="nav-link text-muted text-decoration-none" href="#">
-                                    <%=currentUser.username%>
-                                </a>
+                                <a class="nav-link" href="register" style="margin-right: 0.5vw;">Register</a>
                             </li>
-                            <% } %>
-                </ul>
-            </div>
-        </div>
-    </nav>
-        <!-- <nav class="container-fluid">
-            <div class="row">
-                <div class="col-1">
-                    <a href="/">ELearn</a>
-                </div>
-                <div class="col-7">
-                    <input type="search" placeholder="Search" aria-label="Search">
-                    <button type="submit">Search</button>
-                </div>
-                <div class="col-4">
-                    <a href="/">Home</a>
-                    <a href="\courses">Courses</a>
-                    <% if(!currentUser) {%>
-                        <a href="\signin">Sign In</a>
-                        <a href="\register">Register</a>
-                        <% } else{ %>
-                            <a href="\logout">Logout</a>
-                            <%=currentUser.username%>
+
+                            <% } else{ %>
+                                <li style="margin-left: 65vw;">
+                                    <a class="nav-link" href="logout">Logout</a>
+                                </li>
+                                <li style="margin-right: 0.5vw;">
+                                    <a class="nav-link text-muted text-decoration-none" href="#">
+                                        <%=currentUser.username%>
+                                    </a>
+                                </li>
                                 <% } %>
+                    </ul>
                 </div>
             </div>
-        </nav> -->
+        </nav>
         <div class="jumbotron jumbotron-fluid" id="jumbo">
             <div class="container">
                 <h1 class="display-4">
@@ -107,7 +85,8 @@
             </center>
         </div>
         <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=<%=course.link%>" title="YouTube video player" frameborder="0"
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=<%=course.link%>"
+                title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
