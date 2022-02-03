@@ -23,25 +23,6 @@ h2{
     font-size: 2.5rem;
 }
 
-nav{
-    padding: 10px;
-    background-color: #3F72AF;
-}
-
-nav div:nth-of-type(1){
-    display: flex;
-    justify-content: center;
-}
-
-nav input[type=search]{
-    width: 70%;
-}
-
-nav div:nth-of-type(3) {
-    display: flex;
-    justify-content: space-around;
-}
-
 a{
     color: aliceblue;
     text-decoration: none;

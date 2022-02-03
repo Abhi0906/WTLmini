@@ -1,22 +1,3 @@
-nav{
-    padding: 10px;
-    background-color: #3F72AF;
-}
-
-nav .col-1 {
-    display: flex;
-    justify-content: center;
-}
-
-nav input[type=search]{
-    width: 70%;
-}
-
-nav .col-4 {
-    display: flex;
-    justify-content: space-around;
-}
-
 nav a{
     color: aliceblue;
     text-decoration: none;
