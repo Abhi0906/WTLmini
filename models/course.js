@@ -7,7 +7,8 @@ const CourseSchema = new Schema({
     duration: String,
     rating: Number,
     author: String,
-    link: String
+    link: String,
+    image: String
 });
 
 

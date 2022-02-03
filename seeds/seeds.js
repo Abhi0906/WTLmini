@@ -22,6 +22,7 @@ const seedDB = async () => {
             rating: `${courses[i].rating}`,
             author: `${courses[i].author}`,
             link: `${courses[i].link}`,
+            image: `${courses[i].image}`
         })
         await course.save();
     }

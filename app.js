@@ -61,11 +61,13 @@ const isLoggedIn = (req, res, next) => {
     next();
 }
 
-app.get('/', (req, res) => {
-    res.render('index');
+app.get('/', async (req, res) => {
+    const courses = await Course.find({});
+    res.render('index', { courses });
 })
-app.get('/home', (req, res) => {
-    res.render('index');
+app.get('/home', async (req, res) => {
+    const courses = await Course.find({});
+    res.render('index', { courses });
 })
 app.get('/courses', async (req, res) => {
     const courses = await Course.find({});
@@ -80,6 +82,7 @@ app.post('/courses', async (req, res) => {
         author: req.body.newCourse.author,
         rating: req.body.newCourse.rating,
         link: req.body.newCourse.link,
+        image: req.body.newCourse.image
     })
     await course.save();
     req.flash('success', 'Successfully Added a new Course');

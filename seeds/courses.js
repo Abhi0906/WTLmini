@@ -5,7 +5,8 @@ module.exports = [
         duration: '1 Days 10 hrs',
         rating: 4,
         author: 'CodeWithHarry',
-        link: 'https://www.youtube.com/embed/videoseries?list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg'
+        link: 'https://www.youtube.com/embed/videoseries?list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg',
+        image: 'https://media.istockphoto.com/photos/code-picture-id157527725?b=1&k=20&m=157527725&s=170667a&w=0&h=cTlQvzOhDC7qu7-14gle4txa303Bq3of5vTC5IJOcjg='
     },
     {
         title: 'Machine Learning For Beginners',
@@ -13,7 +14,8 @@ module.exports = [
         duration: '12 hrs',
         rating: 3,
         author: 'codebasics',
-        link: 'https://www.youtube.com/embed/videoseries?list=PLeo1K3hjS3uvCeTYTeyfe0-rN5r8zn9rw'
+        link: 'https://www.youtube.com/embed/videoseries?list=PLeo1K3hjS3uvCeTYTeyfe0-rN5r8zn9rw',
+        image: 'https://media.istockphoto.com/photos/block-chain-background-picture-id1155359725?b=1&k=20&m=1155359725&s=170667a&w=0&h=ClHSo_bwxP5VidJmkeFTFEZZ4mYHmgRnxoCHAgetwVU='
     },
     {
         title: 'Unity Beginners Tutorials',
@@ -21,6 +23,7 @@ module.exports = [
         duration: '14 hrs',
         rating: 5,
         author: 'Brackeys',
-        link: 'https://www.youtube.com/embed/videoseries?list=PLPV2KyIb3jR5QFsefuO2RlAgWEz6EvVi6'
+        link: 'https://www.youtube.com/embed/videoseries?list=PLPV2KyIb3jR5QFsefuO2RlAgWEz6EvVi6',
+        image: 'https://images.unsplash.com/photo-1624378515195-6bbdb73dff1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z2FtaW5nJTIwY29kZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60'
     }
 ];
