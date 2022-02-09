@@ -1,6 +1,9 @@
 body{
     width: 100%;
     margin-bottom: 0px;
+    background-image: url("https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8d2hpdGUlMjBncmFkaWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 nav{

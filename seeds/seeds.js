@@ -14,7 +14,7 @@ db.once("open", () => {
 
 const seedDB = async () => {
     await Course.deleteMany({});
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 6; i++) {
         const course = new Course({
             title: `${courses[i].title}`,
             description: `${courses[i].description}`,

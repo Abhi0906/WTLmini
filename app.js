@@ -7,9 +7,8 @@ const path = require('path');
 const flash = require('connect-flash');
 const methodOverride = require('method-override');
 const session = require('express-session');
-const passport = require('passport')
-const LocalStrategy = require('passport-local')
-
+const passport = require('passport');
+const LocalStrategy = require('passport-local');
 
 const dbUrl = 'mongodb://localhost:27017/wtl';
 mongoose.connect(dbUrl);
