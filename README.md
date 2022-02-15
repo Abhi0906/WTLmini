@@ -11,5 +11,5 @@
 # Courses Page
 ![Courses Page Here](Images/Courses%20Page.png)
 
-# Course View Page
+# Course View Page (For Admin, User doesn't have delete access)
 ![Course View Page Here](Images/View%20Course%20Page.png)
